@@ -27,13 +27,9 @@
   font-weight: 500;
 }
 
-.nav-menu li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  cursor: pointer;
+.nav-menu .link {
+  text-decoration: none;
+  color: #171717;
 }
 
 .nav-login-cart {
