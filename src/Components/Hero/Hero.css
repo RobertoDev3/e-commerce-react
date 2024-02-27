@@ -23,6 +23,7 @@
 .hero-left p {
   color: #171717;
   font-size: 100px;
+  font-size: clamp(4rem, -1.5rem + 8vw, 6.3rem);
   font-weight: 700;
 }
 
@@ -33,7 +34,7 @@
 }
 
 .hero-hand-icon img {
-  width: 105px;
+  width: clamp(4rem, -1.5rem + 8vw, 6.3rem);
 }
 
 .hero-latest-btn {

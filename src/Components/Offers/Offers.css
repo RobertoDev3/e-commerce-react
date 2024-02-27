@@ -1,5 +1,6 @@
 .offers {
   width: 65%;
+  min-width: 800px;
   height: 60dvh;
   display: flex;
   margin: auto;
@@ -17,7 +18,7 @@
 
 .offers-left h1 {
   color: #171717;
-  font-size: 80px;
+  font-size: clamp(3rem, -1.5rem + 7vw, 5rem);
   font-weight: 600;
 }
 
