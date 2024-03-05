@@ -48,3 +48,21 @@
   justify-content: flex-end;
   padding-top: 50px;
 }
+
+@media only screen and (max-width: 799px) {
+  .offers {
+    height: auto;
+    width: auto;
+    min-width: auto;
+    padding: 50px 20px;
+    margin-bottom: 0;
+  }
+
+  .offers-left button {
+    margin: 30px auto;
+  }
+
+  .offers-right {
+    display: none;
+  }
+}
