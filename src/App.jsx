@@ -10,12 +10,14 @@ import Footer from "./Components/Footer/Footer";
 import men_banner from "./Assets/banner_mens.png";
 import women_banner from "./Assets/banner_women.png";
 import kid_banner from "./Assets/banner_kids.png";
+import NavbarMobile from "./Components/NavbarMobile/NavbarMobile";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Navbar />
+        <NavbarMobile />
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route
