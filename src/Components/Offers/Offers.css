@@ -28,19 +28,6 @@
   font-weight: 600;
 }
 
-.offers-left button {
-  width: 282px;
-  height: 70px;
-  border-radius: 35px;
-  background-color: #ff4141;
-  border: none;
-  color: white;
-  font-size: 22px;
-  font-weight: 500;
-  margin-top: 30px;
-  cursor: pointer;
-}
-
 .offers-right {
   flex: 1;
   display: flex;

@@ -35,22 +35,6 @@
   width: clamp(4rem, -1.5rem + 8vw, 6.3rem);
 }
 
-.hero-latest-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  width: 310px;
-  height: 70px;
-  border-radius: 75px;
-  margin-top: 30px;
-  background-color: #ff4141;
-  color: white;
-  font-size: 22px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
 .hero-right {
   flex: 1;
   display: flex;
@@ -69,7 +53,7 @@
   }
 
   .hero-latest-btn {
-    margin: 30px auto;
+    margin: 0 auto;
   }
 
   .hero-left p {

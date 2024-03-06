@@ -6,18 +6,6 @@
   gap: 50px;
 }
 
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.footer-logo p {
-  color: #383838;
-  font-size: 48px;
-  font-weight: 700;
-}
-
 .footer-links {
   display: flex;
   list-style: none;
@@ -28,6 +16,10 @@
 
 .footer-links li {
   cursor: pointer;
+
+  &:hover {
+    font-weight: 600;
+  }
 }
 
 .footer-social-icons {
@@ -40,6 +32,17 @@
   padding-bottom: 6px;
   background-color: #fbfbfb;
   border: 1px solid #ebebeb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    transform: rotate(10deg);
+  }
+
+  &:active {
+    transform: scale(1.1);
+  }
 }
 
 .footer-copyright {

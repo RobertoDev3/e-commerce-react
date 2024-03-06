@@ -5,18 +5,6 @@
   box-shadow: 0 1px 3px -2px black;
 }
 
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.nav-logo p {
-  color: #171717;
-  font-size: 38px;
-  font-weight: 600;
-}
-
 .nav-menu {
   display: flex;
   align-items: center;
@@ -27,9 +15,8 @@
   font-weight: 500;
 }
 
-.link {
-  text-decoration: none;
-  color: #171717;
+.nav-menu .link:hover {
+  font-weight: 600;
 }
 
 .nav-login-cart {
@@ -49,24 +36,47 @@
   font-weight: 500;
   background-color: white;
   cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
 
   &:active {
     background-color: #f3f3f3;
+    transform: scale(1);
   }
 }
 
 .nav-cart-count {
+  position: relative;
   width: 22px;
   height: 22px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   margin-top: -35px;
   margin-left: -55px;
   border-radius: 11px;
   font-size: 14px;
   background-color: red;
   color: white;
+}
+
+.nav-cart:hover {
+  animation: shake 0.2s linear 2;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
 }
 
 @media only screen and (max-width: 799px) {
