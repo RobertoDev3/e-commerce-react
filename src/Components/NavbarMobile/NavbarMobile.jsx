@@ -1,39 +1,55 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./NavbarMobile.css";
-import cart_icon from "../../Assets/cart_icon.png";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 import LogoShopper from "../LogoShopper/LogoShopper";
+import LoginButton from "../LoginButton/LoginButton";
+import NavCart from "../NavCart/NavCart";
 
 const NavbarMobile = () => {
-  const { getTotalCartItems } = useContext(ShopContext);
+  const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
+  const [menuClass, setMenuClass] = useState("nav-mobile-menu hidden");
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+  const updateMenu = () => {
+    if (!isMenuClicked) {
+      setBurgerClass("burger-bar clicked");
+      setMenuClass("nav-mobile-menu visible");
+    } else {
+      setBurgerClass("burger-bar unclicked");
+      setMenuClass("nav-mobile-menu hidden");
+    }
+    setIsMenuClicked(!isMenuClicked);
+  };
 
   return (
     <div className="navbar-mobile">
       <LogoShopper />
-      {/* <ul className="nav-menu">
-        <Link className="link" to="/">
-          Shop
-        </Link>
-        <Link className="link" to="/mens">
-          Men
-        </Link>
-        <Link className="link" to="/womens">
-          Women
-        </Link>
-        <Link className="link" to="/kids">
-          Kids
-        </Link>
-      </ul> */}
-      {/* <div className="nav-login-cart">
-        <Link to="/login">
-          <button>Login</button>
-        </Link>
-        <Link to="/cart">
-          <img src={cart_icon} alt="" />
-        </Link>
-        <div className="nav-cart-count">{getTotalCartItems()}</div>
-      </div> */}
+      <div className="burger-menu" onClick={updateMenu}>
+        <div className={burgerClass}></div>
+        <div className={burgerClass}></div>
+        <div className={burgerClass}></div>
+      </div>
+      <div className={menuClass}>
+        <div className="menu-links">
+          <Link className="link" to="/">
+            Shop
+          </Link>
+          <Link className="link" to="/mens">
+            Men
+          </Link>
+          <Link className="link" to="/womens">
+            Women
+          </Link>
+          <Link className="link" to="/kids">
+            Kids
+          </Link>
+        </div>
+        <div className="nav-login-cart">
+          <LoginButton />
+          <NavCart />
+        </div>
+      </div>
     </div>
   );
 };

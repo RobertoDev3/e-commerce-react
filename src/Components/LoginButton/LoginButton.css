@@ -1,0 +1,22 @@
+.login-button {
+  width: 157px;
+  height: 58px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 75px;
+  color: #515151;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  &:active {
+    background-color: #f3f3f3;
+    transform: scale(1);
+  }
+}
