@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./NavbarMobile.css";
 import { Link } from "react-router-dom";
-import { ShopContext } from "../../Context/ShopContext";
 import LogoShopper from "../LogoShopper/LogoShopper";
 import LoginButton from "../LoginButton/LoginButton";
 import NavCart from "../NavCart/NavCart";
