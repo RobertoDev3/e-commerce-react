@@ -9,45 +9,60 @@ const CartItems = () => {
 
   return (
     <div className="cart-items">
-      <div className="cart-items-format-main">
-        <p>Products</p>
-        <p>Title</p>
-        <p>Price</p>
-        <p>Quantity</p>
-        <p>Total</p>
-        <p>Remove</p>
-      </div>
-      <hr />
-      {all_product.map((e, key) => {
-        if (cartItems[e.id] > 0) {
-          return (
-            <div>
-              <div
-                key={key}
-                className="cart-items-format cart-items-format-main"
-              >
-                <img className="cart-icon-product-icon" src={e.image} alt="" />
-                <p>{e.name}</p>
-                <p>${e.new_price}</p>
-                <button className="cart-items-quantity">
-                  {cartItems[e.id]}
-                </button>
-                <p>${e.new_price * cartItems[e.id]}</p>
-                <img
-                  className="cart-icon-remove-icon"
-                  src={remove_icon}
-                  onClick={() => {
-                    removeFromCart(e.id);
-                  }}
-                  alt=""
-                />
-              </div>
-              <hr />
-            </div>
-          );
-        }
-        return null;
-      })}
+      <table>
+        <thead>
+          <tr>
+            <th className="th-product">Products</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          {all_product.map((e, key) => {
+            if (cartItems[e.id] > 0) {
+              return (
+                <tr key={key}>
+                  <td className="td-img-porduct">
+                    <img
+                      className="cart-icon-product-icon"
+                      src={e.image}
+                      alt=""
+                    />
+                  </td>
+                  <td>
+                    <p>{e.name}</p>
+                  </td>
+                  <td>
+                    <p>${e.new_price}</p>
+                  </td>
+                  <td>
+                    <button className="cart-items-quantity">
+                      {cartItems[e.id]}
+                    </button>
+                  </td>
+                  <td>
+                    <p>${e.new_price * cartItems[e.id]}</p>
+                  </td>
+                  <td>
+                    <img
+                      className="cart-icon-remove-icon"
+                      src={remove_icon}
+                      onClick={() => {
+                        removeFromCart(e.id);
+                      }}
+                      alt=""
+                    />
+                  </td>
+                </tr>
+              );
+            }
+            return null;
+          })}
+        </tbody>
+      </table>
       <div className="cart-items-down">
         <div className="cart-items-total">
           <h1>Cart Totals</h1>
